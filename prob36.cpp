@@ -8,29 +8,24 @@ int main() {
     const double discount15 = 0.15;
     const double discount5 = 0.05;
 
-    // Ask for user's age
     cout << "Enter your age: ";
     cin >> age;
 
-    // Validate age range
     if (age <= 0 || age > 120) {
         cout << "Invalid age." << endl;
         return 0;
     }
 
-    // Check if the user is between 2 and 3
     if (age >= 2 && age <= 3) {
         cout << "You are allowed to watch the movie with parental supervision." << endl;
         cout << "Your ticket is free." << endl;
         return 0;
     }
 
-    // Ask if the user has a student ID
     cout << "Do you have a student ID? (Y/N): ";
     cin >> hasStudentID;
     hasStudentID = toupper(hasStudentID);
 
-    // Ask for parental supervision if the user is between 4 and 15
     if (age >= 4 && age <= 15) {
         cout << "Do you have parental supervision? (Y/N): ";
         cin >> parentalSupervision;
@@ -50,7 +45,6 @@ int main() {
         }
     }
 
-    // Check for ages above 15
     else if (age > 15 && age < 18) {
         if (hasStudentID == 'Y') {
             ticketPrice -= ticketPrice * discount5;
@@ -62,7 +56,6 @@ int main() {
         }
     }
 
-    // Age above 18
     else if (age >= 18) {
         if (hasStudentID == 'Y') {
             ticketPrice -= ticketPrice * discount5;
