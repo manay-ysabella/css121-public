@@ -7,22 +7,18 @@ int main() {
     char gender;
     bool isOnBreak;
 
-    // Input age
     cout << "Enter your age: ";
     cin >> age;
 
-    // Input gender (M/F)
     cout << "Enter your gender (M/F): ";
     cin >> gender;
-    gender = toupper(gender);  // Ensure gender is uppercase
+    gender = toupper(gender);  
 
-    // Input break status (Y = on break, N = not on break)
     char breakInput;
     cout << "Is it break time? (Y/N): ";
     cin >> breakInput;
     isOnBreak = (toupper(breakInput) == 'Y');
 
-    // Check if the bartender should serve drinks
     if (isOnBreak) {
         cout << "Bartender is on break, no drinks will be served." << endl;
     } else {
