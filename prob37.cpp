@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Function to check if a year is a leap year
 bool isLeapYear(int year) {
     if ((year % 4 == 0 && year % 100 != 0) || (year % 400 == 0))
         return true;
@@ -13,7 +12,6 @@ int main() {
     int month, day, year;
     string zodiacSign, chineseZodiac;
 
-    // Input for month, day, year
     cout << "Enter month (1-12): ";
     cin >> month;
     cout << "Enter day: ";
@@ -21,7 +19,6 @@ int main() {
     cout << "Enter year: ";
     cin >> year;
 
-    // Determine the zodiac sign using a switch statement
     switch (month) {
         case 1:
             zodiacSign = (day <= 19) ? "Capricorn" : "Aquarius";
@@ -64,7 +61,6 @@ int main() {
             return 0;
     }
 
-    // Determine the Chinese Zodiac based on the year of birth
     switch (year % 12) {
         case 0: chineseZodiac = "Monkey"; break;
         case 1: chineseZodiac = "Rooster"; break;
@@ -80,10 +76,8 @@ int main() {
         case 11: chineseZodiac = "Goat"; break;
     }
 
-    // Output the zodiac sign and Chinese zodiac
     cout << "You are born under the sign of " << zodiacSign << ", Year of the " << chineseZodiac << "." << endl;
 
-    // Check if the year is a leap year
     if (isLeapYear(year)) {
         cout << "Year is a leap year." << endl;
     } else {
